@@ -3,13 +3,14 @@
 window.onload = function() {
   // Your web app's Firebase configuration
   var firebaseConfig = {
-  apiKey: "AIzaSyBsQUuM70Azr3KRZugU5wlIwuXc7bBSi7A",
-  authDomain: "klasa4chat.firebaseapp.com",
-  databaseURL: "https://klasa4chat-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "klasa4chat",
-  storageBucket: "klasa4chat.appspot.com",
-  messagingSenderId: "729700709087",
-  appId: "1:729700709087:web:71d038cf9e06b6cb5b2f6a"
+    apiKey: "AIzaSyCm-vw2q4BN48h07yqlc9MdKb_0cnuAPts",
+    authDomain: "infa-chat-871f7.firebaseapp.com",
+    databaseURL: "https://infa-chat-871f7-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "infa-chat-871f7",
+    storageBucket: "infa-chat-871f7.appspot.com",
+    messagingSenderId: "404872110792",
+    appId: "1:404872110792:web:33b8264f293822992d7bfd",
+    measurementId: "G-78DCS1913X"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -40,7 +41,7 @@ window.onload = function() {
 
       var title = document.createElement('h1')
       title.setAttribute('id', 'title')
-      title.textContent = '222222'
+      title.textContent = 'glosna muzyka bo tak'
 
       title_inner_container.append(title)
       title_container.append(title_inner_container)

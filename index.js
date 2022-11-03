@@ -147,7 +147,7 @@ window.onload = function() {
       var chat_input_send = document.createElement('button')
       chat_input_send.setAttribute('id', 'chat_input_send')
       chat_input_send.setAttribute('disabled', true)
-      chat_input_send.innerHTML = `<img src="https://cdns.iconmonstr.com/wp-content/assets/preview/2013/240/iconmonstr-paper-plane-1.png" alt="iconforsendingaaa" width="30" height="30"></i>`
+      chat_input_send.innerHTML = `<img src="➤" alt="➤" width="30" height="30"></i>`
 
       var chat_input = document.createElement('input')
       chat_input.setAttribute('id', 'chat_input')

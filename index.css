@@ -282,7 +282,7 @@ body{
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #cccs;
+  background: #ccc;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {

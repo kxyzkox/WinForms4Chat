@@ -1,6 +1,6 @@
 body{
   /* https://www.color-hex.com/color/d3d3d3 */
-  background-color: #fff; /*#f6f6f6, EBEBD3, fafafa*/
+  background-color: #1f1f1f; /*#f6f6f6, EBEBD3, fafafa*/
   font-family: Bungee Outline;
   font-weight: 900;
 
@@ -186,7 +186,7 @@ body{
   margin-top: 20px;
 }
 #chat_logout{
-  color: #D64045;
+  color: #0080ff;
   cursor: pointer;
 }
 #chat_logout:hover{
@@ -228,7 +228,7 @@ body{
 .enabled{
   transition: background-color 0.5s;
   color: #fff;
-  background-color: #D64045; /*#5B7553;*/
+  background-color: #0080ff; /*#5B7553;*/
   cursor: pointer;
 }
 #title_container.chat_title_container{
@@ -254,7 +254,7 @@ body{
   height: 40px;
   animation: spin 1s linear infinite;
 
-  border-top: 6px solid #D64045;
+  border-top: 6px solid #0080ff;
   border-bottom: 6px solid #1D3354;
   border-left: 6px solid #E9FFF9;
   border-right: 6px solid #E9FFF9;
@@ -273,7 +273,7 @@ body{
   100% {}
 }
 ::selection {
-  background-color: #D64045;
+  background-color: #0080ff;
   color: #fff;
 }
 /* width */
@@ -282,10 +282,10 @@ body{
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #cccs;
+  background: #ccc;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #D64045;
+  background: #0080ff;
   border-radius: 5px;
 }

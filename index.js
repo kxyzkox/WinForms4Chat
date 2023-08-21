@@ -3,14 +3,14 @@
 window.onload = function() {
   // Your web app's Firebase configuration
   const firebaseConfig = {
-    apiKey: "AIzaSyCm-vw2q4BN48h07yqlc9MdKb_0cnuAPts",
-    authDomain: "infa-chat-871f7.firebaseapp.com",
-    databaseURL: "https://infa-chat-871f7-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "infa-chat-871f7",
-    storageBucket: "infa-chat-871f7.appspot.com",
-    messagingSenderId: "404872110792",
-    appId: "1:404872110792:web:33b8264f293822992d7bfd",
-    measurementId: "G-78DCS1913X"
+    apiKey: "AIzaSyDcVbbX01iUh-utekdXOOUgyqgnlqyLmr0",
+    authDomain: "winforms4chat.firebaseapp.com",
+    databaseURL: "https://winforms4chat-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "winforms4chat",
+    storageBucket: "winforms4chat.appspot.com",
+    messagingSenderId: "1010235895214",
+    appId: "1:1010235895214:web:48f779bf8e25ad97836c3f",
+    measurementId: "G-9RVF762S3N"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -41,7 +41,7 @@ window.onload = function() {
 
       var title = document.createElement('h1')
       title.setAttribute('id', 'title')
-      title.textContent = 'Infa bo tak'
+      title.textContent = 'WinForms4Chat'
 
       title_inner_container.append(title)
       title_container.append(title_inner_container)
@@ -147,7 +147,17 @@ window.onload = function() {
       var chat_input_send = document.createElement('button')
       chat_input_send.setAttribute('id', 'chat_input_send')
       chat_input_send.setAttribute('disabled', true)
-      chat_input_send.innerHTML = `<img src="➤" alt="➤" width="30" height="30"></i>`
+      chat_input_send.innerHTML = `➤`
+
+      document.addEventListener("keyup", function(event) {
+        if (event.key === 'Enter') {
+          document.getElementById("chat_input_send").click();
+        }
+    });
+    
+      //if (event.key === "Enter") {
+      //  document.getElementById("chat_input_send").click();
+      //}
 
       var chat_input = document.createElement('input')
       chat_input.setAttribute('id', 'chat_input')
@@ -219,10 +229,10 @@ window.onload = function() {
       }
 
       // Get the firebase database value
-      db.ref('chats/').once('value', function(message_object) {
+      db.ref('server1/').once('value', function(message_object) {
         // This index is mortant. It will help organize the chat in order
         var index = parseFloat(message_object.numChildren()) + 1
-        db.ref('chats/' + `message_${index}`).set({
+        db.ref('server1/' + `message_${index}`).set({
           name: parent.get_name(),
           message: message,
           index: index
@@ -248,7 +258,7 @@ window.onload = function() {
       var chat_content_container = document.getElementById('chat_content_container')
 
       // Get the chats from firebase
-      db.ref('chats/').on('value', function(messages_object) {
+      db.ref('server1/').on('value', function(messages_object) {
         // When we get the data clear chat_content_container
         chat_content_container.innerHTML = ''
         // if there are no messages in the chat. Retrun . Don't load anything
@@ -324,6 +334,23 @@ window.onload = function() {
         chat_content_container.scrollTop = chat_content_container.scrollHeight;
     })
 
+    //var input = document.getElementById("chat_input_send");
+    //input.addEventListener("keypress", function(event) {
+    //  if (event.key === "Enter") {
+    //    event.preventDefault();
+    //    document.getElementById("button").click();
+    //  }
+    //});
+
+    //    chat_input_send.setAttribute('id', 'chat_input_send')
+
+
+
+
+    //      var chat_input_send = document.createElement('button')
+    //      chat_input_send.setAttribute('id', 'chat_input_send')
+    //      chat_input_send.setAttribute('disabled', true)
+    //     chat_input_send.innerHTML = `➤`
     }
   }
   // So we've "built" our app. Let's make it work!!
